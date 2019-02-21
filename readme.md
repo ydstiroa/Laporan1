@@ -1,6 +1,4 @@
-#Laporan Pratikum 1
-
-#Laporan Pratikum Modul 1
+# Laporan Pratikum Modul 1
 
 ### No.1 
 Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienkripsi oleh seseorang menggunakan bash script, file yang dimaksud adalah nature.zip. Karena terlalu mudah kalian memberikan syarat akan membuka seluruh file tersebut jika pukul 14:14 pada tanggal 14 Februari atau hari tersebut adalah hari jumat pada bulan Februari.
@@ -91,16 +89,16 @@ Jawab :
 
 * Tidak mengandung string sudo
 
-	$0 !~ /sudo/
+		$0 !~ /sudo/
 * Jumlah number of field kurang dari 13 
 
-	$0 ~ /cron/
+		$0 ~ /cron/
 * Masukkan record tadi ke file log pada direktori 
 
-	 /home/yudhis/modul1/syslogno5.log
-* Setting pada crontab *
+		 /home/yudhis/modul1/syslogno5.log
+* Setting pada crontab 
 
-	2-30/6 * * * *
+		2-30/6 * * * *
 
 Script utuhnya adalah
 	[Source Code](/soal5.sh)

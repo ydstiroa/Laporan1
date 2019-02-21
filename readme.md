@@ -41,8 +41,23 @@ Laporan yang diminta berupa:
 	*Tentukan tiga product line yang memberikan penjualan(quantity) terbanyak pada soal poin a.
 	*Tentukan tiga product yang memberikan penjualan(quantity) terbanyak berdasarkan tiga product line yang didapatkan pada soal poin b.
 
-Jawab :
-	*Pastikan file dari soal diketahui keberadaannya oleh terminal, ketikkan syntax awk ini pada terminal : 
+Jawab : 
+
+Pastikan file dari soal diketahui keberadaannya oleh terminal, ketikkan syntax awk ini pada terminal : 
+
+	awk -F ',' '{if($7=="2012") a[$1]+=$10} END {for(x in a)print a[x] " "x}' WA_Sales_Products_2012-14.csv | sort -n | tail -1
+
+Ubah syntax pada no a menjadi 
+
+	awk -F ',' '{if(($7=="2012") && ($1=="United States")) a[$4]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3
+
+
+
+Gunakan syntax berikut ini
+
+	awk -F ',' '{if($7=="2012" && $1=="United States" && ($4=="Outdoor Protection" || $4=="Personal Accesories")) a[$6]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3
+
+
 	
 
 ### No.3

@@ -45,21 +45,22 @@ Jawab :
 
 Pastikan file dari soal diketahui keberadaannya oleh terminal, ketikkan syntax awk ini pada terminal : 
 
-	awk -F ',' '{if($7=="2012") a[$1]+=$10} END {for(x in a)print a[x] " "x}' WA_Sales_Products_2012-14.csv | sort -n | tail -1
+	awk -F ',' '{if($7=="2012") a[$1]+=$10} END {for(x in a)print a[x] " "x}' WA_Sales_Products_2012-14.csv | sort -n | tail -1 | awk -F, '{print $2}'
 
 ![soal2](/images/soal2.png)
 
 Ubah syntax pada no a menjadi 
 
-	awk -F ',' '{if(($7=="2012") && ($1=="United States")) a[$4]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3
+	awk -F ',' '{if(($7=="2012") && ($1=="United States")) a[$4]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3 | awk -F, '{print $2}'
 
 ![soal2a](/images/soal2a.png)
 
 Gunakan syntax berikut ini
 
-	awk -F ',' '{if($7=="2012" && $1=="United States" && ($4=="Outdoor Protection" || $4=="Personal Accesories" || $4=="Camping Equipment")) a[$6]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3
+	awk -F, '{if($1=="United States" && $7=="2012" && ($4=="Personal Accessories" || $4=="Camping Equipment" || $4=="Outdoor Protection")) a[$6]+=$10;} END {for(x in a)print a[x] "," x}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 3 | awk -F, '{print $2}'
 
-![soal2b](/images/soal2b.png)
+
+![soal2b](/images/no2c.png)
 	
 ### No.3
 Membuat sebuah script bash yang dapat menghasilkan password secara acak sebanyak 12 karakter yang terdapat huruf besar, kecil, dan angka. File berekstensi .txt dengan syarat disimpan dalam bentuk password1.txt, file selanjutnya tidak boleh sama dengan file sebelumnya dan urutan yang sudah terhapus harus terbuat lagi jika dijalankan, dan pastinya password tidak boleh sama.

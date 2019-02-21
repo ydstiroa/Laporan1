@@ -88,6 +88,33 @@ jika sudah maka cek apakah script tersebut jalan dengan melakukan bash maka hasi
 	![no3](/images/no3.png)
 
 ## No.4
+Lakukan backup file syslog setiap jam dengan format nama file “jam:menit tanggal-
+bulan-tahun”. Isi dari file backup terenkripsi dengan konversi huruf (string
+manipulation) yang disesuaikan dengan jam dilakukannya backup misalkan sebagai
+berikut:
+
+a. Huruf b adalah alfabet kedua, sedangkan saat ini waktu menunjukkan
+pukul 12, sehingga huruf b diganti dengan huruf alfabet yang memiliki
+urutan ke 12+2 = 14.
+b. Hasilnya huruf b menjadi huruf n karena huruf n adalah huruf ke
+empat belas, dan seterusnya.
+c. setelah huruf z akan kembali ke huruf a
+d. Backup file syslog setiap jam.
+e. dan buatkan juga bash script untuk dekripsinya.
+
+Jawab : 
+
+Buatlah file script yang berisi seperti dibawah ini, sebelumnya copy file syslog terlebih dahulu dari direktori var/log pada direktori script anda agar tidak terhalang oleh permission denied.
+
+![no4](/images/no4.png)
+
+Kemudian ketikkan crontab -e dan tambahkan syntax seperti dibawah ini
+
+	@hourly /bin/bash /home/najaslanardo/Documents/Sisop/modul1/soal4.sh >> /home/najaslanardo/Documents/Sisop/modul1/soal4.log 2>&1
+
+Dengan demikian isi dari file syslog akan di backup dan di enkripsi seperti permintaan pada soal setiap satu jam. Berikut file hasil enkripsinya
+
+![n04](/images/no4(2).png)
 
 ## No.5
 Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi

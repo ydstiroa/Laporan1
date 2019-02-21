@@ -9,9 +9,11 @@ Hint: Base64, Hexdump
 Jawab :
 
 hal pertama yang dillakukan adalah membuat file scriptnya  pada folder nature yang sudah diekstrak sebelumnya
+		
 	nano en.sh
 
 setelah itu isikan en.sh dengan script sebagai berikut:    
+		
 	#!/bin/bash
 	z=”1”
 	for i in /home/yudhis/Documents/nature-1/nature/*.jpg
@@ -19,16 +21,18 @@ setelah itu isikan en.sh dengan script sebagai berikut:
 	    base64 -d $i | xxd -r >> /home/yudhis/Documents/Foto/$z.jpg
 	z=$(($z+1))
 	done
+		
 Script tersbut bertujuan untuk men decode setiap gambar yang tidak bisa dibuka agar bisa di bukan kembali.
 
 untuk mencoba apakah script tersebut jalan maka bisa di cek dengan melakakukan
+	
 	bash en.sh
 
-    ![soal1](/images/soal1.png)
+  ![soal1](/images/soal1.png)
 
 sehabis membuat scipt tersebut. Lalu buka (crontab -e) dan setting jadwal sesuai dengan yang diminta
 
-     [Source Code](/en.sh)
+  [Source Code](/en.sh)
 
 ### No.2
 Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta
@@ -50,6 +54,18 @@ Hal pertama yang harus dilakukan adalah membuat scriptnya
 	nano no3.sh
 setelah itu isi file tersebut dengan script berikut ini
 	[Source Code](/no3.sh)
+	
+	#! /bin/bash
+	getpass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1)
+
+	pass="password"
+	no=1
+	while test -e "$pass$no.txt"; 
+	  do  
+	    no=$((no+1))
+	 done
+	fname="$pass$no.txt"
+	echo "$getpass" > $fname
 
 Script tersebut bertujuan untuk membuat file file.txt bernama password[z].txt dimana z akan terus bertambah selama script dijalankan.
 

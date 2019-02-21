@@ -79,13 +79,13 @@ jika sudah maka cek apakah script tersebut jalan dengan melakukan bash maka hasi
 Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi
 kriteria berikut:
 
-*Tidak mengandung string “sudo”, tetapi mengandung string “cron”, serta buatlah pencarian stringnya tidak bersifat case sensitive, sehingga huruf kapital atau tidak, tidak menjadi masalah.
+* Tidak mengandung string “sudo”, tetapi mengandung string “cron”, serta buatlah pencarian stringnya tidak bersifat case sensitive, sehingga huruf kapital atau tidak, tidak menjadi masalah.
 
-*Jumlah field (number of field) pada baris tersebut berjumlah kurang dari 13.
+* Jumlah field (number of field) pada baris tersebut berjumlah kurang dari 13.
 
-*Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[user]/modul1.
+* Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[user]/modul1.
 
-*Jalankan script tadi setiap 6 menit dari menit ke 2 hingga 30, contoh 13:02, 13:08, 13:14, dst.
+* Jalankan script tadi setiap 6 menit dari menit ke 2 hingga 30, contoh 13:02, 13:08, 13:14, dst.
 
 Jawab :
 

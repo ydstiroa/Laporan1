@@ -86,15 +86,15 @@ kriteria berikut:
 
 Jawab :
 
-* Tidak mengandung string sudo*
+* Tidak mengandung string sudo
 
 	$0 !~ /sudo/
-* Jumlah number of field kurang dari 13 *
+* Jumlah number of field kurang dari 13 
 
 	$0 ~ /cron/
-* Masukkan record tadi ke file log pada direktori *
+* Masukkan record tadi ke file log pada direktori 
 
-	>> /home/yudhis/modul1/syslogno5.log
+	 /home/yudhis/modul1/syslogno5.log
 * Setting pada crontab *
 
 	2-30/6 * * * *

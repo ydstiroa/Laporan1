@@ -21,7 +21,7 @@ setelah itu isikan en.sh dengan script sebagai berikut:
 	z=$(($z+1))
 	done
 		
-Script tersbut bertujuan untuk men decode setiap gambar yang tidak bisa dibuka agar bisa di bukan kembali.
+Script tersebut bertujuan untuk men decode setiap gambar yang tidak bisa dibuka agar bisa di bukan kembali.
 
 untuk mencoba apakah script tersebut jalan maka bisa di cek dengan melakakukan
 	

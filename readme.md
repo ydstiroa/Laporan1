@@ -12,7 +12,8 @@ hal pertama yang dillakukan adalah membuat file scriptnya  pada folder nature ya
 		
 	nano en.sh
 
-setelah itu isikan en.sh dengan script sebagai berikut:    
+setelah itu isikan en.sh dengan script sebagai berikut: 
+[Source Code](/en.sh)    
 		
 	#!/bin/bash
 	z=”1”
@@ -31,8 +32,8 @@ untuk mencoba apakah script tersebut jalan maka bisa di cek dengan melakakukan
   ![soal1](/images/soal1.png)
 
 sehabis membuat scipt tersebut. Lalu buka (crontab -e) dan setting jadwal sesuai dengan yang diminta
-
-  [Source Code](/en.sh)
+	
+	14 14 14 2 5 /bin/bash /home/yudhis/Documents/en.sh >> /home/yudhis/Documents/en.log 2>&1
 
 ### No.2
 Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta

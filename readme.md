@@ -57,7 +57,7 @@ Ubah syntax pada no a menjadi
 
 Gunakan syntax berikut ini
 
-	awk -F ',' '{if($7=="2012" && $1=="United States" && ($4=="Outdoor Protection" || $4=="Personal Accesories")) a[$6]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3
+	awk -F ',' '{if($7=="2012" && $1=="United States" && ($4=="Outdoor Protection" || $4=="Personal Accesories" || $4=="Camping Equipment")) a[$6]+=$10} END {for(x in a)print a[x] " " x}' WA_Sales_Products_2012-14.csv | sort -n | tail -3
 
 ![soal2b](/images/soal2b.png)
 	

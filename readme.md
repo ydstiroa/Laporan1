@@ -136,6 +136,9 @@ Jawab :
 		$0 !~ /sudo/
 * Jumlah number of field kurang dari 13 
 
+		NF < 13		
+* mengandung string
+
 		$0 ~ /cron/
 * Masukkan record tadi ke file log pada direktori 
 
